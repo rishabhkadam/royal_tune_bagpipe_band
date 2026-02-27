@@ -74,12 +74,12 @@ export default function Contact() {
 
             <div className="flex items-center gap-3">
               <Mail className="text-primary" size={22} />
-              <span>info@royalbagpipeacademy.in</span>
+              <span>Dhuria.panky@gamil.com</span>
             </div>
 
             <div className="flex items-center gap-3">
               <MapPin className="text-primary" size={22} />
-              <span>New Delhi, India</span>
+              <span>Haryana, India</span>
             </div>
 
           </div>
