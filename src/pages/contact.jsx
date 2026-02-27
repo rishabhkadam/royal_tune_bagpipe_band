@@ -88,7 +88,7 @@ export default function Contact() {
         {/* Right Form Section */}
         <div className="bg-white p-8 rounded-xl text-slate-900 shadow-xl">
           <h3 className="font-display text-2xl text-royal-blue mb-6">
-            Inquiry Form
+            CONTACT US
           </h3>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
