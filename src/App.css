@@ -9,7 +9,7 @@ body {
   font-family: 'Inter', sans-serif;
   /* background-color: #F8F9FB; */
   color: #E2E8F0;
-  background: url("/src/assests/herobg.png");
+  background: url("/public/herobg.webp");
 
 
 }
@@ -267,7 +267,7 @@ input:focus, textarea:focus {
 
 .hero-content {
   text-align: center;
-  max-width: 750px;
+  /* max-width: 750px; */
 }
 
 .hero-buttons {

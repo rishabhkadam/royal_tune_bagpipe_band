@@ -1,7 +1,7 @@
 export default function Training() {
   return (
     <section className="py-20 px-4 bg-slate-50" id="training">
-      <div className="max-w-7xl mx-auto text-center mb-16">
+      <div className="mx-auto text-center mb-16">
         <h2 className="font-display text-3xl gold-gradient-text mb-4">
           WHAT WE DO ?
         </h2>

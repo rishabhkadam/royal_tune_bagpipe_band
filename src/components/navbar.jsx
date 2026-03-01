@@ -26,7 +26,7 @@ export default function Navbar() {
         scrolled ? "bg-[#1A2B4C] shadow-xl" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 flex justify-between h-20 items-center">
+      <div className=" mx-auto px-4 flex justify-between h-20 items-center">
         {/* Logo */}
         <div className="flex items-center">
           <div className="rounded-full flex items-center justify-center pt-2">
@@ -98,7 +98,7 @@ export default function Navbar() {
             href="contact"
             smooth
             duration={500}
-            className="bg-[#d4af37] text-[#1A2B4C] px-4 py-2 rounded text-xs font-bold cursor-pointer hover:scale-105 transition"
+            className="bg-[#d4af37] text-[#1A2B4C] px-2 py-2 rounded text-xs font-bold cursor-pointer hover:scale-105 transition text-center flex"
           >
             JOIN NOW
           </Link>
@@ -124,7 +124,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="block cursor-pointer hover:text-primary"
           >
-            Training
+            What We Do?
           </Link>
 
           <Link

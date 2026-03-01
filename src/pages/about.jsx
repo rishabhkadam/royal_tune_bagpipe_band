@@ -3,18 +3,20 @@ import AboutImge from "../assests/aboutsection.png";
 function About() {
   return (
     <section className="py-20 px-6 bg-white" id="about">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className=" mx-auto text-center">
         {/* SEO Optimized H2 */}
         <h2 className="font-display gold-gradient-text font-[cinzel] text-3xl md:text-4xl text-[#1A2B4C] mb-6">
           About Royal Bagpipe Band & Academy
         </h2>
-        <div className="flex gap-4 ">
-          <div>
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          {/* TEXT SECTION */}
+          <div className="md:w-1/2">
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Royal Bagpipe Band & Academy is a nationally recognized professional
-              bagpipe band and training institute in India, delivering
-              royal-class performances for weddings, corporate events, school
-              annual functions, and government ceremonies across the country.
+              Royal Bagpipe Band & Academy is a nationally recognized
+              professional bagpipe band and training institute in India,
+              delivering royal-class performances for weddings, corporate
+              events, school annual functions, and government ceremonies across
+              the country.
             </p>
 
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
@@ -32,7 +34,15 @@ function About() {
               heritage and ceremonial grandeur of bagpipe music in India.
             </p>
           </div>
-          <img src={AboutImge} alt="Performing band and train student" width={600} height={100}/>
+
+          {/* IMAGE SECTION */}
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={AboutImge}
+              alt="Royal Bagpipe Band performing and training students in India"
+              className="w-full max-w-md md:max-w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
         </div>
       </div>
     </section>

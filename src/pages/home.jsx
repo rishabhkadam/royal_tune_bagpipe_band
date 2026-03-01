@@ -10,7 +10,7 @@ export default function Home() {
         {/* Overlay */}
         <div className="absolute inset-0"></div>
 
-        <div className="relative z-10 text-center px-6 max-w-5xl">
+        <div className="relative z-10 text-center px-6 ">
           {/* H1 - National SEO Focus */}
           <h1 className="font-[cinzel] text-4xl md:text-6xl text-white mb-6 tracking-wide leading-tight">
             India’s Leading Professional Bagpipe Band & Training Academy

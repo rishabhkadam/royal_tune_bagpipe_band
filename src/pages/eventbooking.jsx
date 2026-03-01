@@ -101,7 +101,7 @@ export default function EventBooking() {
       <section className="py-20 bg-slate-50 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold text-[#1A2B4C] mb-8">
-            Why Choose Royal Bagpipe Band & Academy?
+            Why Choose Royal Bagpipe Band?
           </h2>
 
           <ul className="space-y-4 text-slate-600 text-lg">
@@ -110,6 +110,13 @@ export default function EventBooking() {
             <li>✔ National-level event experience</li>
             <li>✔ Punctual & reliable service</li>
             <li>✔ Custom performance arrangements</li>
+            <li>✔ Nationwide availability across India</li>
+            <li>✔ Competitive pricing for premium performances</li>
+            <li>✔ Dedicated customer support for event planning</li>
+            <li>✔ Trusted by clients across weddings, corporates, schools & government</li>
+            <li>✔ Elevate your event with the grandeur of live bagpipe music</li>
+            <li>✔ Book us for an unforgettable, royal-class performance experience</li>
+            <li>✔ Contact us today to discuss your event requirements and secure your booking</li>
           </ul>
         </div>
       </section>

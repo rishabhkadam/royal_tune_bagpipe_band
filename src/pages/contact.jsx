@@ -19,6 +19,18 @@ export default function Contact() {
     });
   };
 
+  async function sendToWhatsapp(name, email, mobile, message) {
+    const whatsappMessage = `New Website Inquiry 🚀
+Name: ${name}
+Mobile: ${mobile}
+Email: ${email}
+Message: ${message}`;
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    window.open(`https://wa.me/${process.env.REACT_APP_WHATSAPP_NUMBER}?text=${encodedMessage}`, "_blank");
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -30,9 +42,9 @@ export default function Contact() {
         {
           method: "POST",
           body: JSON.stringify(form),
-        }
+        },
       );
-
+      sendToWhatsapp(form.name, form.email, form.phone, form.message);
       setForm({
         name: "",
         email: "",
@@ -50,8 +62,7 @@ export default function Contact() {
 
   return (
     <section className="py-24 bg-royal-blue text-white" id="contact">
-      <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16">
-
+      <div className="mx-7 px-4 grid lg:grid-cols-2 gap-16">
         {/* Left Info Section */}
         <div>
           <h2 className="font-display gold-gradient-text text-4xl mb-6">
@@ -64,10 +75,12 @@ export default function Contact() {
           </p>
 
           <div className="space-y-6">
-
             <div className="flex items-center gap-3">
               <Phone className="text-primary" size={22} />
-              <a href="tel:+919817196061" className="hover:text-primary underline">
+              <a
+                href="tel:+919817196061"
+                className="hover:text-primary underline"
+              >
                 +91 981 719 6061
               </a>
             </div>
@@ -81,7 +94,6 @@ export default function Contact() {
               <MapPin className="text-primary" size={22} />
               <span>Haryana, India</span>
             </div>
-
           </div>
         </div>
 
@@ -92,7 +104,6 @@ export default function Contact() {
           </h3>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
-
             <input
               name="name"
               value={form.name}
@@ -107,7 +118,7 @@ export default function Contact() {
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              type="tel"
+              type="number"
               required
               className="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Mobile Number"
@@ -178,10 +189,8 @@ export default function Contact() {
                 Inquiry submitted successfully!
               </div>
             )}
-
           </form>
         </div>
-
       </div>
     </section>
   );
