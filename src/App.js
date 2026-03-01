@@ -29,7 +29,7 @@ function App() {
         </title>
         <meta
           name="description"
-          content="Professional bagpipe training and royal event performances in India."
+          content="Professional bagpipe band event performer and training academy in India."
         />
         <meta
           name="keywords"
