@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
-import Services from "./pages/services";
 import About from "./pages/about";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
@@ -12,7 +10,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import Training from "./pages/training";
 import Testimonials from "./pages/testimonials";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import EventBooking from "./pages/eventbooking";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
