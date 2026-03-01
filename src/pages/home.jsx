@@ -3,7 +3,10 @@ import { Link as RouterLink } from "react-router-dom";
 export default function Home() {
   return (
     <>
-      <section className="relative py-5  flex items-center justify-center overflow-hidden bg-[#1A2B4C]">
+      <section
+        id="hero"
+        className="heroimage relative min-h-screen pt-20 flex items-center justify-center"
+      >
         {/* Overlay */}
         <div className="absolute inset-0"></div>
 
@@ -16,7 +19,12 @@ export default function Home() {
           <div className="w-40 h-1 bg-yellow-500 mx-auto mb-6"></div>
 
           <p className="text-lg md:text-xl text-slate-300 mb-8">
-            Royal Bagpipe Academy is one of India’s premier professional bagpipe bands and training institutes, delivering royal-class performances for weddings, corporate events, school annual functions, government ceremonies, and national celebrations. With a disciplined team of trained performers and certified instructors, we proudly serve clients across India.
+            Royal Bagpipe Band & Academy is one of India’s premier professional
+            bagpipe bands and training institutes, delivering royal-class
+            performances for weddings, corporate events, school annual
+            functions, government ceremonies, and national celebrations. With a
+            disciplined team of trained performers and certified instructors, we
+            proudly serve clients across India.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">

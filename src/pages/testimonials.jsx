@@ -7,7 +7,7 @@ export default function Testimonials() {
         </h2>
 
         <p className="text-xl italic mb-8 text-slate-600">
-          "The discipline and musicality brought by the Royal Bagpipe Academy
+          "The discipline and musicality brought by the Royal Bagpipe Band & Academy
           ensemble changed the entire atmosphere of our annual convocation."
         </p>
 

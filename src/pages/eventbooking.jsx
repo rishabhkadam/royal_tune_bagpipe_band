@@ -6,12 +6,12 @@ export default function EventBooking() {
     <>
       <Helmet>
         <title>
-          Hire Professional Bagpiper for Wedding & Events in India | Royal Bagpipe Academy
+          Hire Professional Bagpiper for Wedding & Events in India | Royal Bagpipe Band & Academy
         </title>
 
         <meta
           name="description"
-          content="Book professional bagpipers and royal pipe bands for weddings, corporate events, school functions and government ceremonies across India. Contact Royal Bagpipe Academy for premium event performances."
+          content="Book professional bagpipers and royal pipe bands for weddings, corporate events, school functions and government ceremonies across India. Contact Royal Bagpipe Band & Academy for premium event performances."
         />
 
         <meta
@@ -28,7 +28,7 @@ export default function EventBooking() {
           </h1>
 
           <p className="text-lg text-slate-300 mb-8">
-            Royal Bagpipe Academy provides royal-class bagpipe band
+            Royal Bagpipe Band & Academy provides royal-class bagpipe band
             performances for weddings, corporate launches, school annual
             functions and government ceremonies nationwide.
           </p>
@@ -101,7 +101,7 @@ export default function EventBooking() {
       <section className="py-20 bg-slate-50 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold text-[#1A2B4C] mb-8">
-            Why Choose Royal Bagpipe Academy?
+            Why Choose Royal Bagpipe Band & Academy?
           </h2>
 
           <ul className="space-y-4 text-slate-600 text-lg">
@@ -122,7 +122,7 @@ export default function EventBooking() {
           </h2>
 
           <p className="text-slate-300 mb-8">
-            Contact Royal Bagpipe Academy now to hire professional
+            Contact Royal Bagpipe Band & Academy now to hire professional
             bagpipers anywhere in India for weddings, corporate
             events, school programs, and official ceremonies.
           </p>

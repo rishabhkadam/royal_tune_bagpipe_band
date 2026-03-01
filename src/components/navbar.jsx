@@ -1,19 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import logo from "../assests/bagpipeLogo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#1A2B4C] text-white shadow-xl border-b border-primary/20">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? "bg-[#1A2B4C] shadow-xl" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 flex justify-between h-20 items-center">
-
         {/* Logo */}
         <div className="flex items-center">
-          <div className="rounded-full flex items-center justify-center">
-            <img src={logo} alt="logo" width={100} height={100} className="object-contain" />
+          <div className="rounded-full flex items-center justify-center pt-2">
+            <img
+              src={logo}
+              alt="logo"
+              width={100}
+              height={100}
+              className="object-contain"
+            />
           </div>
           <div>
             <h1 className="font-display text-xl tracking-wider gold-gradient-text">
@@ -27,15 +50,33 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center uppercase text-sm tracking-widest">
-          <Link to="training" smooth duration={500} className="cursor-pointer hover:text-primary">
+          <Link
+            to="training"
+            smooth
+            duration={500}
+            className="cursor-pointer hover:text-primary"
+          >
             What We Do?
           </Link>
-          <Link to="gallery" smooth duration={500} className="cursor-pointer hover:text-primary">
+
+          <Link
+            to="gallery"
+            smooth
+            duration={500}
+            className="cursor-pointer hover:text-primary"
+          >
             Gallery
           </Link>
-          <Link to="testimonials" smooth duration={500} className="cursor-pointer hover:text-primary">
+
+          <Link
+            to="testimonials"
+            smooth
+            duration={500}
+            className="cursor-pointer hover:text-primary"
+          >
             Reviews
           </Link>
+
           <Link
             to="contact"
             smooth
@@ -48,8 +89,6 @@ export default function Navbar() {
 
         {/* Mobile Right Side */}
         <div className="flex items-center space-x-3 md:hidden">
-
-          {/* JOIN NOW Button (Mobile) */}
           <Link
             to="contact"
             smooth
@@ -59,7 +98,6 @@ export default function Navbar() {
             JOIN NOW
           </Link>
 
-          {/* Hamburger */}
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

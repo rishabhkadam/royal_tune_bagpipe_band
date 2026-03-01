@@ -6,7 +6,7 @@ export default function Training() {
           WHAT WE DO ?
         </h2>
         <p className="text-slate-600 max-w-2xl mx-auto">
-          Royal Bagpipe Academy delivers royal-class band performances for
+          Royal Bagpipe Band & Academy delivers royal-class band performances for
           prestigious events and provides professional bagpipe training
           programs across India.
         </p>
