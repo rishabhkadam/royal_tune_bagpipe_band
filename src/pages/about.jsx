@@ -32,7 +32,7 @@ function About() {
               heritage and ceremonial grandeur of bagpipe music in India.
             </p>
           </div>
-          <img src={AboutImge} width={600} height={100}/>
+          <img src={AboutImge} alt="Performing band and train student" width={600} height={100}/>
         </div>
       </div>
     </section>
