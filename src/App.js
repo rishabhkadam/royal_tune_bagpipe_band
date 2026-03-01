@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet-async";
 import EventBooking from "./pages/eventbooking";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
-
+ 
 function App() {
   useEffect(() => {
     Aos.init({ duration: 1200 });
