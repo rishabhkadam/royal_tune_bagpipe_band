@@ -52,6 +52,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-8 items-center uppercase text-sm tracking-widest">
           <Link
             to="training"
+            href="training"
             smooth
             duration={500}
             className="cursor-pointer hover:text-primary"
@@ -61,6 +62,7 @@ export default function Navbar() {
 
           <Link
             to="gallery"
+            href="gallery"
             smooth
             duration={500}
             className="cursor-pointer hover:text-primary"
@@ -70,6 +72,7 @@ export default function Navbar() {
 
           <Link
             to="testimonials"
+            href="testimonials"
             smooth
             duration={500}
             className="cursor-pointer hover:text-primary"
@@ -79,6 +82,7 @@ export default function Navbar() {
 
           <Link
             to="contact"
+            href="contact"
             smooth
             duration={500}
             className="bg-[#d4af37] text-[#1A2B4C] px-6 py-2 rounded font-bold cursor-pointer hover:scale-105 transition"
@@ -91,6 +95,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-3 md:hidden">
           <Link
             to="contact"
+            href="contact"
             smooth
             duration={500}
             className="bg-[#d4af37] text-[#1A2B4C] px-4 py-2 rounded text-xs font-bold cursor-pointer hover:scale-105 transition"
@@ -113,6 +118,7 @@ export default function Navbar() {
         <div className="bg-[#1A2B4C] border-t border-primary/20 px-6 py-6 space-y-6 uppercase text-sm tracking-widest">
           <Link
             to="training"
+            href="training"
             smooth
             duration={500}
             onClick={() => setIsOpen(false)}
@@ -123,6 +129,7 @@ export default function Navbar() {
 
           <Link
             to="gallery"
+            href="gallery"
             smooth
             duration={500}
             onClick={() => setIsOpen(false)}
@@ -133,6 +140,7 @@ export default function Navbar() {
 
           <Link
             to="testimonials"
+            href="testimonials"
             smooth
             duration={500}
             onClick={() => setIsOpen(false)}
