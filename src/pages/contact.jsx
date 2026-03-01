@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+import { WHATSAPP_NUMBER } from "../config";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -28,7 +29,7 @@ Message: ${message}`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    window.open(`https://wa.me/${process.env.REACT_APP_WHATSAPP_NUMBER}?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, "_blank");
   }
 
   const handleSubmit = async (e) => {
