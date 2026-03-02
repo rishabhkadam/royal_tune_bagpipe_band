@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet-async";
 import EventBooking from "./pages/eventbooking";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
- 
+
 function App() {
   useEffect(() => {
     Aos.init({ duration: 1200 });
@@ -24,17 +24,13 @@ function App() {
     <>
       <Helmet>
         <title>
-          Royal Bagpipe Band and Academy | Best Bagpipe Band and Training
-          Academy in India
+          Royal Bagpipe Academy | Professional Bagpipe Band & Training in India
         </title>
         <meta
           name="description"
-          content="Professional bagpipe band event performer and training academy in India."
+          content="Hire professional bagpipe band in India for weddings, corporate events, school functions and government ceremonies. Royal Bagpipe Academy also offers structured bagpipe training programs nationwide."
         />
-        <meta
-          name="keywords"
-          content="Bagpipe training Haryana, School bagpipe band, Wedding bagpiper, Event bagpiper, Bagpipe coaching, Royal Bagpipe Band & Academy, Bagpipe classes India, Bagpipe performance haryana, Bagpipe training India, Bagpipe band India, sirsa bagpipe training, bagpipe training, bagpipe training haryana, bagpipe training india, event organizer in haryana, event organizer in punjab, event organizer in delhi, event organizer in up, event organizer in rajasthan, event organizer in gujarat, event organizer in maharashtra, event organizer in karnataka, event organizer in tamil nadu, event organizer in kerala, event organizer in west bengal, event organizer in bihar, event organizer in odisha, event organizer in assam, event organizer in northeast india, wedding bagpiper, bagpipe performance, bagpipe band, bagpipe music, bagpipe training, bagpipe classes, bagpipe coaching, royal events, cultural events, school competitions, guitar training, music academy, bagpipe academy, bagpipe school, bagpipe lessons, bagpipe courses, bagpipe workshops, bagpipe instructors, bagpipe teachers, bagpipe professionals, bagpipe experts, band performances, bagpipe entertainment, bagpipe music for events, bagpipe music for weddings, bagpipe music for parties, bagpipe music for corporate events, bagpipe music for cultural events, bagpipe music for school events, bagpipe music for competitions, bagpipe music for festivals, bagpipe music for public events, bagpipe music for private events, bagpipe music for special occasions, bagpipe music for ceremonies, bagpipe music for parades, bagpipe music for memorials, bagpipe music for funerals, bagpipe music for military events, bagpipe music for police events, bagpipe music for government events, bagpipe music for community events, Royal Bagpipe Band & Academy, royal bagpipe band, royal bagpipe training, royal bagpipe performances, royal bagpipe events, royal bagpipe music, royal bagpipe classes, royal bagpipe coaching, royal bagpipe instructors, royal bagpipe teachers, royal bagpipe professionals, royal bagpipe experts, best bagpipe academy, best bagpipe band, best bagpipe training, best bagpipe performances, best bagpipe events, best bagpipe music, best bagpipe classes, best bagpipe coaching, best bagpipe instructors, best bagpipe teachers, best bagpipe professionals, best bagpipe experts, best bagpipe in sirsa, bagpipe band in haryana, bagpipe band in india, bagpiper band in india, bagpiper band in haryana, bagpiper band"
-        />
+        <link rel="canonical" href="https://royalbagpipeacademy.online/" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Royal Bagpipe Band and Academy" />
@@ -44,16 +40,21 @@ function App() {
         />
         <meta
           property="og:image"
-          content="https://royalbagpipeacademy.online/bagpipeLogo.png"
+          content="https://royalbagpipeacademy.online/hero.png"
         />
         <meta property="og:url" content="https://royalbagpipeacademy.online/" />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
+        <meta name="twitter:title" content="Royal Bagpipe Academy" />
+        <meta
+          name="twitter:description"
+          content="Hire professional bagpipe band in India for weddings and events."
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:image"
-          content="https://royalbagpipeacademy.online/bagpipeLogo.png"
+          content="https://royalbagpipeacademy.online/hero.png"
         />
       </Helmet>
       <Navbar />
