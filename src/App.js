@@ -14,6 +14,7 @@ import { Helmet } from "react-helmet-async";
 import EventBooking from "./pages/eventbooking";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
+import FAQ from "./pages/faq";
 
 function App() {
   useEffect(() => {
@@ -56,6 +57,32 @@ function App() {
           name="twitter:image"
           content="https://royalbagpipeacademy.online/hero.png"
         />
+        <script type="application/ld+json">
+          {`
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to hire a bagpipe band in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost typically ranges from ₹15,000 to ₹50,000 depending on the event type and location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide bagpipe band services for weddings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we specialize in royal wedding entries and ceremonial performances across India."
+      }
+    }
+  ]
+}
+`}
+        </script>
       </Helmet>
       <Navbar />
       <Routes>
@@ -69,6 +96,7 @@ function App() {
               <Training />
               <Gallery />
               <Testimonials />
+              <FAQ />
               <Contact />
             </>
           }

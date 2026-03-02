@@ -81,6 +81,16 @@ export default function Navbar() {
           </Link>
 
           <Link
+            to="faq"
+            href="faq"
+            smooth
+            duration={500}
+            className="cursor-pointer hover:text-primary"
+          >
+            FAQ
+          </Link>
+
+          <Link
             to="contact"
             href="contact"
             smooth
@@ -147,6 +157,17 @@ export default function Navbar() {
             className="block cursor-pointer hover:text-primary"
           >
             Reviews
+          </Link>
+
+          <Link
+            to="faq"
+            href="faq"
+            smooth
+            duration={500}
+            onClick={() => setIsOpen(false)}
+            className="block cursor-pointer hover:text-primary"
+          >
+            FAQ
           </Link>
         </div>
       </div>
