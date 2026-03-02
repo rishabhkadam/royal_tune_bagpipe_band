@@ -15,8 +15,10 @@ import EventBooking from "./pages/eventbooking";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
 import FAQ from "./pages/faq";
+import EventFAQ from "./pages/eventFAQ";
 
 function App() {
+
   useEffect(() => {
     Aos.init({ duration: 1200 });
   }, []);
@@ -108,6 +110,7 @@ function App() {
           element={
             <>
               <EventBooking />
+              <EventFAQ />
               <Contact />
             </>
           }
