@@ -1,4 +1,11 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  Youtube,
+} from "lucide-react";
 import { useState } from "react";
 import { WHATSAPP_NUMBER } from "../config";
 
@@ -29,7 +36,10 @@ Message: ${message}`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, "_blank");
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`,
+      "_blank",
+    );
   }
 
   const handleSubmit = async (e) => {
@@ -94,6 +104,52 @@ Message: ${message}`;
             <div className="flex items-center gap-3">
               <MapPin className="text-primary" size={22} />
               <span>Haryana, India</span>
+            </div>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="pt-6">
+            <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
+
+            <div className="flex flex-wrap gap-4">
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/royal_bagpipe_academy?igsh=c2Fvbm04NGk3MzJy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2 rounded-lg text-white 
+    bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
+    hover:scale-105 transition transform shadow-md"
+              >
+                <Instagram size={20} />
+                Instagram
+              </a>
+
+              {/* Facebook */}
+              {/* <a
+                href="https://facebook.com/YOUR_FACEBOOK_PAGE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2 rounded-lg text-white 
+                  bg-[#1877F2] hover:bg-[#1664d9] 
+                  hover:scale-105 transition transform shadow-md"
+              >
+                <Facebook size={20} />
+                Facebook
+              </a> */}
+
+              {/* YouTube */}
+              <a
+                href="https://www.youtube.com/@royal_bagpipe_academy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2 rounded-lg text-white 
+                bg-[#FF0000] hover:bg-[#cc0000] 
+                hover:scale-105 transition transform shadow-md"
+              >
+                <Youtube size={20} />
+                YouTube
+              </a>
             </div>
           </div>
         </div>
