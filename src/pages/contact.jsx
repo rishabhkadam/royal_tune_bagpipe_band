@@ -1,5 +1,5 @@
 import {
-  Facebook,
+  // Facebook,
   Instagram,
   Mail,
   MapPin,
