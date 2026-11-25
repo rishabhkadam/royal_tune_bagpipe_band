@@ -9,7 +9,6 @@ body {
   font-family: 'Inter', sans-serif;
   /* background-color: #F8F9FB; */
   color: #E2E8F0;
-  background: url("/public/herobg.webp");
 
 
 }
@@ -66,7 +65,10 @@ body {
 
 .heroimage {
   position: relative;
-  /* background: url("/src/assests/herobg.png") center/cover no-repeat; */
+  background-image: url("../public/herobg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .heroimage::before {

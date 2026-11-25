@@ -1,4 +1,34 @@
+import { ArrowUpRight, CalendarDays } from "lucide-react";
+import { useEffect, useState } from "react";
+import { WHATSAPP_NUMBER } from "../config";
+
+function getNextMonthLabel() {
+  const today = new Date();
+  const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+  return new Intl.DateTimeFormat("en-IN", {
+    month: "long",
+    year: "numeric",
+  }).format(nextMonth);
+}
+
 export default function Training() {
+  const [nextMonthLabel, setNextMonthLabel] = useState(getNextMonthLabel);
+
+  useEffect(() => {
+    const refreshNextMonth = () => setNextMonthLabel(getNextMonthLabel());
+    const intervalId = window.setInterval(refreshNextMonth, 60 * 60 * 1000);
+    window.addEventListener("focus", refreshNextMonth);
+
+    return () => {
+      window.clearInterval(intervalId);
+      window.removeEventListener("focus", refreshNextMonth);
+    };
+  }, []);
+
+  const bookingMessage = encodeURIComponent(
+    `Hello! I would like to join Royal Bagpipe Academy and book a training session for ${nextMonthLabel}. Please share the available timings and fees. I am interested in online or in-person training.`,
+  );
+
   return (
     <section className="py-20 px-4 bg-slate-50" id="training">
       <div className="mx-auto text-center mb-16">
@@ -17,7 +47,7 @@ export default function Training() {
         {/* 🎺 EVENT SERVICES FIRST */}
         <div className="bg-white text-slate-600 p-8 border-l-4 border-primary shadow-lg rounded-lg md:col-span-2">
           <h3 className="font-display text-2xl mb-4">
-            🎺 Royal Bagpipe Band for Events
+            Royal Bagpipe Band for Events
           </h3>
 
           <ul className="grid md:grid-cols-2 gap-3 list-disc pl-5">
@@ -33,7 +63,7 @@ export default function Training() {
         {/* 🎓 OFFLINE TRAINING */}
         <div className="bg-white text-slate-600 p-8 border-l-4 border-primary shadow-lg rounded-lg">
           <h3 className="font-display text-2xl mb-4">
-            🎓 Offline Bagpipe Training
+            In-Person Bagpipe Training
           </h3>
 
           <ul className="space-y-2 list-disc pl-5">
@@ -48,7 +78,7 @@ export default function Training() {
         {/* 🌍 ONLINE TRAINING */}
         <div className="bg-white text-slate-600 p-8 border-l-4 border-primary shadow-lg rounded-lg">
           <h3 className="font-display text-2xl mb-4">
-            🌍 Online Bagpipe Academy
+            Online Bagpipe Academy
           </h3>
 
           <ul className="space-y-2 list-disc pl-5">
@@ -60,6 +90,29 @@ export default function Training() {
           </ul>
         </div>
 
+      </div>
+
+      <div className="mx-auto mt-14 max-w-3xl rounded-2xl border border-primary/30 bg-white px-6 py-8 text-center shadow-lg md:px-10">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 text-royal-blue">
+          <CalendarDays aria-hidden="true" size={24} />
+        </div>
+        <h3 className="font-display text-2xl text-royal-blue md:text-3xl">
+          Ready to start your bagpipe journey?
+        </h3>
+        <p className="mx-auto mt-3 max-w-xl text-slate-600">
+          Ask about training session availability for {nextMonthLabel}, online or in person.
+        </p>
+        <a
+          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${bookingMessage}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Ask on WhatsApp about booking a bagpipe training session for ${nextMonthLabel}`}
+          className="group mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-royal-blue px-7 py-3 font-semibold text-white shadow-md transition duration-200 hover:-translate-y-1 hover:bg-slate-800 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+        >
+          <CalendarDays aria-hidden="true" size={19} />
+          Book a Session on WhatsApp
+          <ArrowUpRight aria-hidden="true" size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </a>
       </div>
     </section>
   );

@@ -15,36 +15,19 @@ export default function EventBooking() {
           name="description"
           content="Hire professional bagpipe band in India for weddings, corporate events, school functions and government ceremonies. Royal Bagpipe Academy offers royal performances nationwide."
         />
+        <meta property="og:title" content="Hire a Bagpipe Band in India | Royal Bagpipe Academy" />
+        <meta property="og:description" content="Book professional bagpipe performers for weddings, corporate events and ceremonies across India." />
+        <meta property="og:url" content="https://royalbagpipeacademy.online/hire-bagpiper-india" />
+        <meta property="og:image" content="https://royalbagpipeacademy.online/hero.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hire a Bagpipe Band in India | Royal Bagpipe Academy" />
+        <meta name="twitter:description" content="Book professional bagpipe performers for weddings, corporate events and ceremonies across India." />
+        <meta name="twitter:image" content="https://royalbagpipeacademy.online/hero.png" />
         <link
           rel="canonical"
           href="https://royalbagpipeacademy.online/hire-bagpiper-india"
         />
-        <script type="application/ld+json">
-          {`
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does it cost to hire a bagpipe band in India?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The cost typically starts from ₹15,000 and depends on location, performers and event type."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide bagpipe band services for weddings?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we specialize in royal wedding entries and ceremonial performances across India."
-      }
-    }
-  ]
-}
-`}
-        </script>
       </Helmet>
 
       {/* HERO SECTION */}
@@ -103,10 +86,10 @@ export default function EventBooking() {
       </section>
 
       {/* SERVICES SECTION */}
-      <section id="training" className="py-20 px-4">
+      <section id="training" className="py-20 px-4 text-royal-blue">
         <div className="max-w-6xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Bagpipe Band Services</h2>
-          <p className="text-white-600">
+          <p className="text-slate-600">
             Professional performances for all prestigious events across India.
           </p>
         </div>
@@ -131,12 +114,12 @@ export default function EventBooking() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-20 text-center px-4">
+      <section className="py-20 text-center px-4 text-royal-blue">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Make Your Event Grand & Royal
         </h2>
 
-        <p className="text-white-600 mb-8">
+        <p className="text-slate-600 mb-8">
           Limited dates available. Book your professional bagpipe band today.
         </p>
 

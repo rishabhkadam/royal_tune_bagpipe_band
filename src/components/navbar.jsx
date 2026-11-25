@@ -1,11 +1,25 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../assests/bagpipeLogo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const followSection = (id) => (event) => {
+    setIsOpen(false);
+    if (location.pathname !== "/") {
+      event.preventDefault();
+      navigate(`/#${id}`);
+      window.setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 120);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,9 +53,9 @@ export default function Navbar() {
             />
           </div>
           <div>
-            <h1 className="font-display text-xl tracking-wider gold-gradient-text">
+            <p className="font-display text-xl tracking-wider gold-gradient-text">
               ROYAL BAGPIPE
-            </h1>
+            </p>
             <p className="text-[10px] uppercase tracking-[0.2em]">
               Band & Academy India
             </p>
@@ -55,6 +69,7 @@ export default function Navbar() {
             href="training"
             smooth
             duration={500}
+            onClick={followSection("training")}
             className="cursor-pointer hover:text-primary"
           >
             What We Do?
@@ -65,6 +80,7 @@ export default function Navbar() {
             href="gallery"
             smooth
             duration={500}
+            onClick={followSection("gallery")}
             className="cursor-pointer hover:text-primary"
           >
             Gallery
@@ -75,6 +91,7 @@ export default function Navbar() {
             href="testimonials"
             smooth
             duration={500}
+            onClick={followSection("testimonials")}
             className="cursor-pointer hover:text-primary"
           >
             Reviews
@@ -85,6 +102,7 @@ export default function Navbar() {
             href="faq"
             smooth
             duration={500}
+            onClick={followSection("faq")}
             className="cursor-pointer hover:text-primary"
           >
             FAQ
@@ -95,6 +113,7 @@ export default function Navbar() {
             href="contact"
             smooth
             duration={500}
+            onClick={followSection("contact")}
             className="bg-[#d4af37] text-[#1A2B4C] px-6 py-2 rounded font-bold cursor-pointer hover:scale-105 transition"
           >
             JOIN NOW
@@ -108,6 +127,7 @@ export default function Navbar() {
             href="contact"
             smooth
             duration={500}
+            onClick={followSection("contact")}
             className="bg-[#d4af37] text-[#1A2B4C] px-2 py-2 rounded text-xs font-bold cursor-pointer hover:scale-105 transition text-center flex"
           >
             JOIN NOW
@@ -131,7 +151,7 @@ export default function Navbar() {
             href="training"
             smooth
             duration={500}
-            onClick={() => setIsOpen(false)}
+            onClick={followSection("training")}
             className="block cursor-pointer hover:text-primary"
           >
             What We Do?
@@ -142,7 +162,7 @@ export default function Navbar() {
             href="gallery"
             smooth
             duration={500}
-            onClick={() => setIsOpen(false)}
+            onClick={followSection("gallery")}
             className="block cursor-pointer hover:text-primary"
           >
             Gallery
@@ -153,7 +173,7 @@ export default function Navbar() {
             href="testimonials"
             smooth
             duration={500}
-            onClick={() => setIsOpen(false)}
+            onClick={followSection("testimonials")}
             className="block cursor-pointer hover:text-primary"
           >
             Reviews
@@ -164,7 +184,7 @@ export default function Navbar() {
             href="faq"
             smooth
             duration={500}
-            onClick={() => setIsOpen(false)}
+            onClick={followSection("faq")}
             className="block cursor-pointer hover:text-primary"
           >
             FAQ

@@ -9,6 +9,7 @@ export default function Privacy() {
           name="description"
           content="Read how Royal Bagpipe Band & Academy collects, uses, and protects your personal information."
         />
+        <link rel="canonical" href="https://royalbagpipeacademy.online/privacy-policy" />
       </Helmet>
 
       <section className="py-20 px-6 bg-white text-slate-700">

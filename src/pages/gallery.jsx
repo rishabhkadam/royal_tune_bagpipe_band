@@ -51,8 +51,9 @@ export default function Gallery() {
               <div className="overflow-hidden rounded-lg">
                 <img
                   src={item}
-                  alt="Gallery"
+                  alt={`Royal Bagpipe Band performance ${index + 1}`}
                   className="w-full h-64 object-cover hover:scale-110 transition duration-500"
+                  loading="lazy"
                 />
               </div>
             </SwiperSlide>

@@ -1,8 +1,23 @@
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Royal Bagpipe Band &amp; Training Academy in India</title>
+        <meta name="description" content="Book a professional bagpipe band for weddings, corporate events, school functions and ceremonies across India. Explore Royal Bagpipe Academy training." />
+        <link rel="canonical" href="https://royalbagpipeacademy.online/" />
+        <meta property="og:title" content="Royal Bagpipe Band & Training Academy in India" />
+        <meta property="og:description" content="Professional bagpipe performances for events and structured training across India." />
+        <meta property="og:url" content="https://royalbagpipeacademy.online/" />
+        <meta property="og:image" content="https://royalbagpipeacademy.online/hero.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Royal Bagpipe Band & Training Academy in India" />
+        <meta name="twitter:description" content="Professional bagpipe performances for events and structured training across India." />
+        <meta name="twitter:image" content="https://royalbagpipeacademy.online/hero.png" />
+      </Helmet>
       <section
         id="hero"
         className="heroimage relative min-h-screen pt-20 flex items-center justify-center"

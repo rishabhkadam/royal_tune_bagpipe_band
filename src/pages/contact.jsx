@@ -19,15 +19,16 @@ export default function Contact() {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
+    setForm((current) => ({
+      ...current,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
-  async function sendToWhatsapp(name, email, mobile, message) {
+  function sendToWhatsapp(name, email, mobile, message) {
     const whatsappMessage = `New Website Inquiry 🚀
 Name: ${name}
 Mobile: ${mobile}
@@ -46,16 +47,18 @@ Message: ${message}`;
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
+    setError(false);
+    sendToWhatsapp(form.name, form.email, form.phone, form.message);
 
     try {
-      await fetch(
+      const response = await fetch(
         "https://script.google.com/macros/s/AKfycbwzTPsYWeURuMB_ovdL3CsxaYdJ4MzL-SitOScldDIYCeY6aJyHkT6ale-5Ij6NVxLbug/exec",
         {
           method: "POST",
           body: JSON.stringify(form),
         },
       );
-      sendToWhatsapp(form.name, form.email, form.phone, form.message);
+      if (!response.ok) throw new Error("Inquiry service returned an error");
       setForm({
         name: "",
         email: "",
@@ -64,8 +67,9 @@ Message: ${message}`;
       });
 
       setSuccess(true);
-    } catch (error) {
-      alert("Something went wrong. Please try again.");
+    } catch {
+      setSuccess(false);
+      setError(true);
     }
 
     setLoading(false);
@@ -98,7 +102,7 @@ Message: ${message}`;
 
             <div className="flex items-center gap-3">
               <Mail className="text-primary" size={22} />
-              <span>Dhuria.panky@gamil.com</span>
+              <a href="mailto:Dhuria.panky@gmail.com" className="hover:text-primary underline">Dhuria.panky@gmail.com</a>
             </div>
 
             <div className="flex items-center gap-3">
@@ -169,13 +173,16 @@ Message: ${message}`;
               type="text"
               className="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Full Name"
+              autoComplete="name"
             />
 
             <input
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              type="number"
+              type="tel"
+              inputMode="tel"
+              autoComplete="tel"
               required
               className="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Mobile Number"
@@ -188,6 +195,7 @@ Message: ${message}`;
               type="email"
               className="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Email"
+              autoComplete="email"
             />
 
             <textarea
@@ -201,6 +209,7 @@ Message: ${message}`;
             />
 
             {/* Submit Button */}
+            {error && <p role="alert" className="text-red-700 text-sm">We couldn’t confirm the web form submission. Please send your inquiry in the WhatsApp tab that opened, or call us directly.</p>}
             <button
               type="submit"
               disabled={loading}

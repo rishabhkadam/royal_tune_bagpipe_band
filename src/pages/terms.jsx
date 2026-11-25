@@ -9,6 +9,7 @@ export default function Terms() {
           name="description"
           content="Read the terms and conditions for booking bagpipe band services and enrolling in training programs at Royal Bagpipe Band & Academy."
         />
+        <link rel="canonical" href="https://royalbagpipeacademy.online/terms-conditions" />
       </Helmet>
 
       <section className="py-20 px-6 bg-white text-slate-700">
