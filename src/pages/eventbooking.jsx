@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Phone, MessageCircle, CheckCircle } from "lucide-react";
-import weddingImg from "../assests/wedding_entry.png";
-import corporateImg from "../assests/corporate_event.png";
+import weddingImg from "../assests/wedding_entry.jpg";
+import corporateImg from "../assests/corporate_event.jpg";
 import marchingImg from "../assests/bagpipe03.jpeg";
 
 export default function EventBooking() {
@@ -18,12 +18,12 @@ export default function EventBooking() {
         <meta property="og:title" content="Hire a Bagpipe Band in India | Royal Bagpipe Academy" />
         <meta property="og:description" content="Book professional bagpipe performers for weddings, corporate events and ceremonies across India." />
         <meta property="og:url" content="https://royalbagpipeacademy.online/hire-bagpiper-india" />
-        <meta property="og:image" content="https://royalbagpipeacademy.online/hero.png" />
+        <meta property="og:image" content="https://royalbagpipeacademy.online/hero512.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hire a Bagpipe Band in India | Royal Bagpipe Academy" />
         <meta name="twitter:description" content="Book professional bagpipe performers for weddings, corporate events and ceremonies across India." />
-        <meta name="twitter:image" content="https://royalbagpipeacademy.online/hero.png" />
+        <meta name="twitter:image" content="https://royalbagpipeacademy.online/hero512.png" />
         <link
           rel="canonical"
           href="https://royalbagpipeacademy.online/hire-bagpiper-india"
@@ -95,11 +95,13 @@ export default function EventBooking() {
         </div>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <ServiceCard image={weddingImg} title="Wedding Entry & Baraat" />
-          <ServiceCard image={corporateImg} title="Corporate Events" />
+          <ServiceCard image={weddingImg} title="Wedding Entry & Baraat" width={1000} height={667} />
+          <ServiceCard image={corporateImg} title="Corporate Events" width={900} height={900} />
           <ServiceCard
             image={marchingImg}
             title="School & Government Ceremonies"
+            width={1600}
+            height={720}
           />
         </div>
       </section>
@@ -135,12 +137,14 @@ export default function EventBooking() {
 }
 
 /* SERVICE CARD COMPONENT */
-function ServiceCard({ image, title }) {
+function ServiceCard({ image, title, width, height }) {
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
       <img
         src={image}
         alt={title}
+        width={width}
+        height={height}
         className="w-full h-60 object-cover"
         loading="lazy"
       />

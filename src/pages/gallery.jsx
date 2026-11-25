@@ -22,7 +22,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="py-20 bg-slate-100" id="gallery">
+    <section className="py-20 bg-slate-100">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="font-display text-3xl gold-gradient-text mb-10 text-center">
           Performance Gallery

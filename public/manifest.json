@@ -3,11 +3,6 @@
   "name": "Royal Bagpipe Band & Academy",
   "icons": [
     {
-      "src": "bagpipeLogo.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
       "src": "hero192.png",
       "type": "image/png",
       "sizes": "192x192"

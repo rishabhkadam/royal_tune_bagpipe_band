@@ -11,9 +11,9 @@ export default function Testimonials() {
           ensemble changed the entire atmosphere of our annual convocation."
         </p>
 
-        <h4 className="font-bold text-slate-900 mb-2">
+        <h3 className="font-bold text-slate-900 mb-2">
           Dr. Rajesh Khanna
-        </h4>
+        </h3>
         <p className="text-sm text-slate-500">
           Principal, Heritage International School
         </p>

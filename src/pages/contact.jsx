@@ -113,7 +113,7 @@ Message: ${message}`;
 
           {/* Social Media Links */}
           <div className="pt-6">
-            <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
+            <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
 
             <div className="flex flex-wrap gap-4">
               {/* Instagram */}
@@ -148,7 +148,7 @@ Message: ${message}`;
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-2 rounded-lg text-white 
-                bg-[#FF0000] hover:bg-[#cc0000] 
+                bg-[#C40000] hover:bg-[#a30000]
                 hover:scale-105 transition transform shadow-md"
               >
                 <Youtube size={20} />

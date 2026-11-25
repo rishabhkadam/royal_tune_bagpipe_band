@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 export default function Home() {
@@ -11,12 +10,12 @@ export default function Home() {
         <meta property="og:title" content="Royal Bagpipe Band & Training Academy in India" />
         <meta property="og:description" content="Professional bagpipe performances for events and structured training across India." />
         <meta property="og:url" content="https://royalbagpipeacademy.online/" />
-        <meta property="og:image" content="https://royalbagpipeacademy.online/hero.png" />
+        <meta property="og:image" content="https://royalbagpipeacademy.online/hero512.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Royal Bagpipe Band & Training Academy in India" />
         <meta name="twitter:description" content="Professional bagpipe performances for events and structured training across India." />
-        <meta name="twitter:image" content="https://royalbagpipeacademy.online/hero.png" />
+        <meta name="twitter:image" content="https://royalbagpipeacademy.online/hero512.png" />
       </Helmet>
       <section
         id="hero"
@@ -50,14 +49,12 @@ export default function Home() {
               BOOK US
             </RouterLink>
 
-            <Link
-              to="training"
-              smooth
-              duration={500}
+            <a
+              href="/#training"
               className="border border-white text-white px-8 py-3 rounded font-semibold cursor-pointer hover:bg-white hover:text-[#1A2B4C] transition"
             >
               JOIN NOW
-            </Link>
+            </a>
           </div>
         </div>
       </section>

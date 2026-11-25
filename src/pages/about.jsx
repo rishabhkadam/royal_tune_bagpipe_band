@@ -1,4 +1,4 @@
-import AboutImge from "../assests/aboutsection.png";
+import AboutImge from "../assests/aboutsection.jpg";
 
 function About() {
   return (
@@ -40,6 +40,9 @@ function About() {
             <img
               src={AboutImge}
               alt="Royal Bagpipe Band performing and training students in India"
+              width={1200}
+              height={800}
+              loading="lazy"
               className="w-full max-w-md md:max-w-full h-auto rounded-lg shadow-lg"
             />
           </div>
